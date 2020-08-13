@@ -1,0 +1,101 @@
+1597310456571	geckodriver	INFO	Listening on 127.0.0.1:58867
+1597310456578	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileR23tuY"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597310458957	Marionette	INFO	Listening on port 41511
+1597310458990	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+1597311340021	geckodriver	INFO	Listening on 127.0.0.1:54463
+1597311340027	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilescMIjm"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597311341241	Marionette	INFO	Listening on port 35727
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+1597311341535	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597311460434	geckodriver	INFO	Listening on 127.0.0.1:56607
+1597311460439	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3sUgxO"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597311461561	Marionette	INFO	Listening on port 41309
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+1597311461940	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+1597311589076	Marionette	INFO	Stopped listening on port 35727
+1597311952598	geckodriver	INFO	Listening on 127.0.0.1:37453
+1597311952604	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile5OxGe4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+1597311954097	Marionette	INFO	Listening on port 46087
+1597311954111	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+1597312416481	geckodriver	INFO	Listening on 127.0.0.1:55831
+1597312417497	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiles7VU3u"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597312419566	Marionette	INFO	Listening on port 40975
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+1597312419842	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597312616876	Marionette	INFO	Stopped listening on port 40975
+1597312618045	Marionette	INFO	Stopped listening on port 46087
+1597312619379	Marionette	INFO	Stopped listening on port 41309
+1597312621449	Marionette	INFO	Stopped listening on port 41511
+1597312989937	geckodriver	INFO	Listening on 127.0.0.1:55733
+1597312990959	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevIuMR0"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597312992138	Marionette	INFO	Listening on port 38201
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+1597312992187	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+1597313247347	geckodriver	INFO	Listening on 127.0.0.1:35007
+1597313247353	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilea6jO5L"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597313248349	Marionette	INFO	Listening on port 44395
+1597313248356	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x6A0008,name=PMessagePort::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597313437268	Marionette	INFO	Stopped listening on port 44395
+1597313438724	Marionette	INFO	Stopped listening on port 38201
+1597326775939	geckodriver	INFO	Listening on 127.0.0.1:49501
+1597326775945	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileM4OvQU"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597326777122	Marionette	INFO	Listening on port 44339
+1597326777148	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/app.696e69d51d821d44fec9.js, line 1: unreachable code after return statement
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1597327020885	Marionette	INFO	Stopped listening on port 44339
