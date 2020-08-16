@@ -4,18 +4,20 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
 import time
 import os
 import datetime
+from connectToSql import *
 
 # https://stackoverflow.com/questions/51933480/how-to-send-media-files-on-whatsapp-programmatically-using-click-to-chat-feature/51935096
 # https://stackoverflow.com/questions/49831933/eliminate-entering-qr-whatsapp-web-automated-by-selenium-java
 contact_example = "אמא"
 text = "Hey, this message was sent using Selenium"
-path_to_chromedriver = os.path.join(os.getcwd(), "chromedriver")
+path_to_chromedriver = os.path.join(os.getcwd(), "chromedriver.exe")
 
 options = webdriver.ChromeOptions()
-options.add_argument(r"user-data-dir=\data")
+options.add_argument(r"user-data-dir=data")
 
 driver = webdriver.Chrome(executable_path=path_to_chromedriver, options=options)
 # driver = webdriver.Chrome()
@@ -27,18 +29,7 @@ print("Logged In")
 # input_box_search = WebDriverWait(driver, 50).until(lambda driver: driver.find_element_by_xpath(inp_xpath_search))
 # input_box_search.click()
 INPUT = {
-    'צרף אותי': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
+    'צרף אותי': 'רישום',
 }
 
 
@@ -49,7 +40,7 @@ _SELECTORS = {
         'mainPage': ".app.two",
         'chatList': ".infinite-list-viewport",
         'messageList': "#main > div > div:nth-child(1) > div > div.message-list",  # didn't work
-        'message-in': "#main > div > div:nth-child(1) > div > div>div.message-in",
+        'message-in': "div.message-in",  #"#main > div > div:nth-child(1) > div > div>div.message-in"
         'message-all': "div > span.selectable-text",
         'unreadMessageBar': "#main > div > div:nth-child(1) > div > div.message-list > div.msg-unread",
         'searchBar': ".input",
@@ -99,6 +90,14 @@ def send_file():  # only after click_on_send_file_button
     time.sleep(2)
 
 
+def send_message(answer):
+    driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]').click()
+    for line in answer.split('\n'):
+        ActionChains(driver).send_keys(line).perform()
+        ActionChains(driver).key_down(Keys.SHIFT).key_down(Keys.ENTER).key_up(Keys.SHIFT).key_up(Keys.ENTER).perform()
+    ActionChains(driver).send_keys(Keys.RETURN).perform()
+
+
 def send_text(text):
     sending_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
     sending_box.click()
@@ -106,9 +105,6 @@ def send_text(text):
     sending_box.send_keys(text)
     time.sleep(2)
     sending_box.send_keys(Keys.ENTER)
-
-
-
 
 
 def get_contacts():
@@ -145,6 +141,26 @@ def get_last_message_of_contact_object_by_click(contact_object):
     return driver.find_elements_by_css_selector(_SELECTORS['message-in'])[-1].text
 
 
+def get_last_message_of_contact_object_after_click():
+    time.sleep(2)
+    # in_messages = driver.find_elements_by_css_selector(_SELECTORS['message-in'])
+    in_messages = driver.find_elements_by_css_selector("div[class*='message-in']")
+    print("in_messages: ", in_messages)
+    count = 0
+    while len(in_messages) == 0:
+        if count >= 20:
+            break
+        time.sleep(1)
+        count += 1
+        in_messages = driver.find_elements_by_css_selector("div[class='_2hqOq message-in focusable-list-item']")
+        if len(in_messages) > 0:
+            break
+        else:
+            print("waiting for file to download...")
+    return in_messages[-1].text
+
+
+
 def return_list_of_unread_contacts():
     # https://www.softwaretestinghelp.com/css-selector-selenium-locator-selenium-tutorial-6/
     # find by substring in css selector
@@ -160,11 +176,24 @@ def return_list_of_unread_contacts():
     print("len of unread contacts: ", len(unread))
     return unread
 
-# find_unread_contact()
-list_of_unread_contacts = return_list_of_unread_contacts()
-for con in list_of_unread_contacts:
-    con_message = get_last_message_of_contact_object_by_click(con)
-    print(con_message)
-# driver.quit()
+#list_of_unread_contacts = return_list_of_unread_contacts()
+#for con in list_of_unread_contacts:
+#    con_message = get_last_message_of_contact_object_by_click(con)
+#    print(con_message)
 
+time.sleep(4)
+input_box = get_contact()
+time.sleep(2)
+pick_contact(input_box, "שלמהxplace")
+time.sleep(3)
+text = get_reshum(INPUT["צרף אותי"])
+send_message(text)
+#last_message = get_last_message_of_contact_object_after_click()
+#if 'צרף אותי' in last_message:
+#    text = get_reshum(INPUT["צרף אותי"])
+#    time.sleep(2)
+#    send_text("*Greetings from ,%0a %0a M/s. me %0a %0a")
+#else:
+#    print("last message: ", last_message)
 
+#driver.quit()
