@@ -26,6 +26,22 @@ print("Logged In")
 # inp_xpath_search = "//div[@title='Search or start new chat']"
 # input_box_search = WebDriverWait(driver, 50).until(lambda driver: driver.find_element_by_xpath(inp_xpath_search))
 # input_box_search.click()
+INPUT = {
+    'צרף אותי': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+}
+
+
 _SELECTORS = {
         'firstrun': "#wrapper",
         'qrCode': "img[alt=\"Scan me!\"]",
@@ -92,7 +108,7 @@ def send_text(text):
     sending_box.send_keys(Keys.ENTER)
 
 
-# driver.quit()
+
 
 
 def get_contacts():
@@ -122,19 +138,33 @@ def find_all_unread():
         print(content.find_element_by_css_selector(_SELECTORS['message-all']).text)
         print(content.get_attribute('innerHTML'))
 
-# get_contacts()
 
-# find_all_unread()
+def get_last_message_of_contact_object_by_click(contact_object):
+    contact_object.click()
+    time.sleep(2)
+    return driver.find_elements_by_css_selector(_SELECTORS['message-in'])[-1].text
 
 
-def find_unread_contact():
+def return_list_of_unread_contacts():
     # https://www.softwaretestinghelp.com/css-selector-selenium-locator-selenium-tutorial-6/
     # find by substring in css selector
-    time.sleep(5)
+    unread = []
+    time.sleep(3)
     for elem in driver.find_elements_by_css_selector("span[aria-label*='unread messages']"):
-        print(elem.get_attribute('innerHTML'))
-        elem.click()
-    time.sleep(2)
-    send_text('תודה שעזרת לי זה הודעה שנשלחה אוטומטית')
+        # print(elem.get_attribute('innerHTML'))
+        # elem.click()
+        unread.append(elem)
+    # unread.append(driver.find_elements_by_css_selector("span[aria-label*='unread messages']"))
+    print("len of unread contacts: ", len(unread))
+    unread.append(driver.find_elements_by_css_selector("span[aria-label*='unread message']")[0])
+    print("len of unread contacts: ", len(unread))
+    return unread
 
-find_unread_contact()
+# find_unread_contact()
+list_of_unread_contacts = return_list_of_unread_contacts()
+for con in list_of_unread_contacts:
+    con_message = get_last_message_of_contact_object_by_click(con)
+    print(con_message)
+# driver.quit()
+
+
